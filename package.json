@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "stylelint \"src/*.css\""
+    "test": "stylelint \"src/*.scss\""
   },
   "keywords": [],
   "author": "",
@@ -12,11 +12,20 @@
   "devDependencies": {
     "stylelint": "^9.1.2",
     "stylelint-config-prettier": "^3.0.4",
-    "stylelint-config-standard": "^18.2.0"
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-sass-guidelines": "^5.0.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^0.8.1",
+    "stylelint-selector-bem-pattern": "^2.0.0"
   },
   "stylelint": {
+    "plugins": [
+      "stylelint-selector-bem-pattern",
+      "stylelint-scss"
+    ],
     "extends": [
-      "stylelint-config-standard",
+      "stylelint-config-recommended",
+      "stylelint-config-sass-guidelines",
       "stylelint-config-prettier"
     ]
   }
